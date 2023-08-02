@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Donation Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0px;
+            padding: 0px;
+        
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            margin-left: 7px;
+        }
+
+        .dimg {
+            background-image: url(dimg.jpeg);
+            width: 100%;
+            height: 100vh;
+            opacity: 0.9;
+            z-index: -2;
+            background-size: cover;
+        }
+
+        .logo {
+            
+            margin: auto;
+    text-decoration: none;
+    color: #ffb406;
+    padding: 11px;
+}
+
+.logo h1 {
+    margin: 15px 100px;
+}
+
+.logo h1 span {
+    color: rgb(96, 153, 10);
+}
+        .donationForm {
+            margin: 32px;
+            position: absolute;
+            top: 30%;
+            left: 49%;
+            max-width: 505px;
+            height: 350px;
+            width: 227%;
+            background: transparent;
+            box-shadow: -21px 8px 26px rgba(0, 0, 0, 0.9);
+            margin: 42px;
+        }
+
+        input,
+        select {
+            width: 65%;
+padding: 11px;
+margin-bottom: 12px;
+border: 1px solid #ccc;
+border-radius: 4px;
+margin-left: 5px;
+        }
+        .mh2{
+
+           width: 100%;
+           height: 145px;
+           padding-left: 860px;
+           padding-top: 60px;
+           font-size: 45px;
+        }
+        button {
+
+            padding: 10px 20px;
+            background-color: #ffb406;
+            color: #020101;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left:28px;
+            
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dimg">
+        <div class="logo">
+            <h1><span>Helping</span> HANDS</h1>
+         </div>
+        <h2 class="mh2">Make a Donation</h2>
+        <form id="donationForm" class="donationForm">
+            <label for="name">Name:</label>
+            <input type="text" placeholder="Enter your name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" placeholder="email" name="email" required>
+
+            <label for="amount">Donation Amount:</label>
+            <input type="number"  id="amount" name="amount" min="1" step="1" required>
+
+            <label for="paymentMethod">Payment Method:</label>
+            <select id="paymentMethod" name="paymentMethod" required>
+                <option value="creditCard">Credit Card</option>
+                <option value="paypal">PayPal</option>
+                <option value="paypal">paytm</option>
+                <option value="paypal">Phonepay</option>
+                <option value="paypal">googlepay</option>
+
+            </select>
+<br>
+            <button type="submit" onclick="donating()">Donate</button>
+        </form>
+    </div>
+
+    <script>
+        function donating() {
+            alert("Thank you for donating");
+        }
+
+    </script>
+</body>
+
+</html>
